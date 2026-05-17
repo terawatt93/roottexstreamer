@@ -1,0 +1,17 @@
+{
+  "article_a4_12pt": "\\documentclass[a4paper,12pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[T2A]{fontenc}\n\\usepackage[english,russian]{babel}\n\\usepackage{tikz}\n\\usetikzlibrary{patterns,plotmarks}\n\\begin{document}\n",
+  
+  "article_a4_12pt_geometry_1cm": "\\documentclass[a4paper,12pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[T2A]{fontenc}\n\\usepackage[english,russian]{babel}\n\\usepackage{geometry}\n\\geometry{left=1cm,right=1cm,top=1cm,bottom=1.5cm}\n\\usepackage{tikz}\n\\usetikzlibrary{patterns,plotmarks}\n\\begin{document}\n",
+  
+  "extarticle_a4_14pt": "\\documentclass[a4paper,14pt]{extarticle}\n\\usepackage[utf8]{inputenc}\n\\usepackage[T2A]{fontenc}\n\\usepackage[english,russian]{babel}\n\\usepackage{tikz}\n\\usetikzlibrary{patterns,plotmarks}\n\\begin{document}\n",
+  
+  "beamer": "\\documentclass{beamer}\n\\usepackage[utf8]{inputenc}\n\\usepackage[T2A]{fontenc}\n\\usepackage[english,russian]{babel}\n\\usetheme{default}\n\\usepackage{tikz}\n\\usetikzlibrary{patterns,plotmarks}\n\\begin{document}\n",
+
+  "xelatex_article_a4_12pt": "\\documentclass[a4paper,12pt]{article}\n\\usepackage{fontspec}\n\\usepackage[english,russian]{babel}\n\\usepackage{tikz}\n\\usetikzlibrary{patterns,plotmarks}\n\\begin{document}\n",
+  
+  "xelatex_article_a4_12pt_geometry_1cm": "\\documentclass[a4paper,12pt]{article}\n\\usepackage{fontspec}\n\\usepackage[english,russian]{babel}\n\\usepackage{geometry}\n\\geometry{left=1cm,right=1cm,top=1cm,bottom=1cm}\n\\usepackage{tikz}\n\\usetikzlibrary{patterns,plotmarks}\n\\begin{document}\n",
+  
+  "xelatex_extarticle_a4_14pt": "\\documentclass[a4paper,14pt]{extarticle}\n\\usepackage{fontspec}\n\\usepackage[english,russian]{babel}\n\\usepackage{tikz}\n\\usetikzlibrary{patterns,plotmarks}\n\\begin{document}\n",
+  
+  "xelatex_beamer": "\\documentclass{beamer}\n\\usepackage{fontspec}\n\\usepackage[english,russian]{babel}\n\\usetheme{default}\n\\usepackage{tikz}\n\\usetikzlibrary{patterns,plotmarks}\n\\begin{document}\n"
+}

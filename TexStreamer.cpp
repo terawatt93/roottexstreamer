@@ -960,6 +960,7 @@ void TexStreamer::SetTextColor( Color_t cindex )
 
 void TexStreamer::Text(Double_t x, Double_t y, const char *chars)
 {
+	cout<<"found #: "<<chars<<"\n";
    Double_t wh = (Double_t)gPad->XtoPixel(gPad->GetX2());
    Double_t hh = (Double_t)gPad->YtoPixel(gPad->GetY1());
    Float_t tsize, ftsize;
@@ -986,6 +987,10 @@ void TexStreamer::Text(Double_t x, Double_t y, const char *chars)
    }
    t.ReplaceAll("&","\\&");
    t.ReplaceAll("#","\\#");
+    if (t.Index("#")>=0)
+    {
+		cout<<"found #: "<<t<<"\n";
+	}
    t.ReplaceAll("%","\\%");
 
    Int_t txalh = fTextAlign/10;
@@ -2048,4 +2053,25 @@ TEXDocument::TEXDocument(string doctype)
 	}
 	Pages.resize(1);
 	ActualPage=&Pages[0];
+}
+void TEXDocument::Save(string filename)
+{
+	OutFileName=filename;
+	ofstream ofs(filename);
+	ofs<<Generate();
+	ofs.close();
+}
+void TEXDocument::SaveAndCompile(string filename)
+{
+	Save(filename);
+	string command;
+	if(Preamble.find("usepackage{fontspec}")!=string::npos)
+	{
+		command="xelatex "+filename;
+	}
+	else
+	{
+		command="pdflatex "+filename;
+	}
+	gSystem->Exec(command.c_str());
 }

@@ -181,10 +181,14 @@ class TEXDocument:public TObject
 	TEXDocument(string doctype="article_a4_12pt_geometry_1cm");
 	string Preamble;
 	string PreambleType;
+	string OutFileName;
 	vector<TEXPage> Pages;
 	TEXPage *ActualPage;
 	string Generate();
 	ClassDef(TEXDocument, 1);
+	void Save(string filename);
+	void SaveAndCompile(string filename);
+	//void Compile();
 };
 TEXDocument &operator << (TEXDocument &tx, string value);
 TEXDocument &operator << (TEXDocument &tx, TEXPage &value);

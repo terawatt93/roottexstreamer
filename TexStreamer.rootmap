@@ -1,0 +1,10 @@
+[ TexStreamer.so ]
+# List of selected classes
+class TEXDocument
+class TEXFigure
+class TEXFormula
+class TEXPage
+class TEXTable
+class TEXTableCell
+class TexStreamer
+header TexStreamer.hh
